@@ -1,0 +1,133 @@
+/* Estilo general */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Encabezado */
+header {
+    background-color: #013f8a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Contenedor del carrusel */
+.carousel-container {
+    position: relative;
+    width: 100%; /* Ocupa todo el ancho */
+    height: 80vh; /* Mantiene la altura fija del contenedor */
+    overflow: hidden;
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: rgb(253, 255, 235); /* Fondo oscuro para que contraste */
+    display: flex; /* Flexbox para centrar contenido */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+}
+/* imagenes tamaño */
+.carousel img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+/* Subtítulos del carrusel */
+.carousel-caption {
+    position: absolute;
+    bottom: 20px; /* Separación desde la parte inferior */
+    left: 50%; /* Centrado horizontal */
+    transform: translateX(-50%); /* Ajuste para centrar completamente */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: white;
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 1rem;
+}
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 1024px) {
+    .carousel-container {
+        height: 85vh; /* Más alto en pantallas grandes */
+    }
+
+    .carousel-caption {
+        font-size: 1.2rem; /* Texto más grande en pantallas grandes */
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .carousel-container {
+        height: 70vh; /* Más compacto en pantallas pequeñas */
+    }
+
+    .carousel-caption {
+        font-size: 0.9rem; /* Texto más pequeño en pantallas pequeñas */
+        padding: 8px 15px; /* Espaciado reducido */
+    }
+}
+
+
+
+.carousel {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel img {
+    width: auto; /* Imagen ajusta el ancho automáticamente */
+    height: 100%;
+    object-fit: contain; /* Imagen centrada sin recortes */
+    display: none; /* Oculta todas las imágenes inicialmente */
+}
+
+.carousel img.active {
+    display: block; /* Muestra solo la imagen activa */
+}
+
+/* Pie de página */
+footer {
+    background-color: #f00;
+    color: white;
+    text-align: center;
+    padding: 10px 10;
+    margin-top: auto;
+    font-size: 1.3rem;
+    height: 50px;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-container {
+        height: 65vh; /* Reducir altura en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-container {
+        height: 55vh; /* Reducir aún más en pantallas pequeñas */
+    }
+}
